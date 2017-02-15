@@ -38,7 +38,7 @@ def register():
         login_user(user)
 
         flash('Thank you for registering.', 'success')
-        return redirect(url_for("user.members"))
+        return redirect(url_for("user_client.members"))
 
     return render_template('user/register.html', form=form)
 
@@ -52,7 +52,7 @@ def login():
                 user.password, request.form['password']):
             login_user(user)
             flash('You are logged in. Welcome!', 'success')
-            return redirect(url_for('user.members'))
+            return redirect(url_for('user_client.members'))
         else:
             flash('Invalid email and/or password.', 'danger')
             return render_template('user/login.html', form=form)

@@ -68,7 +68,7 @@ app.register_blueprint(main_blueprint)
 
 from project.server.models import User
 
-login_manager.login_view = "user.login"
+login_manager.login_view = "user_client.login"
 login_manager.login_message_category = 'danger'
 
 
